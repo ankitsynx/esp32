@@ -6,11 +6,14 @@ import time
 
 time.sleep(1)
 
-# Clear Oled and Print new text
+# Clear Oled and Print new text with error handling in case OLED is disconnected
 def print_oled(display_text,x,y):
-    oled.fill(0)
-    oled.text(display_text,x,y,1)
-    oled.show()
+    try:
+        oled.fill(0)
+        oled.text(display_text,x,y,1)
+        oled.show()
+    except:
+        print(display_text)
 
 
 
@@ -63,4 +66,3 @@ while True:
     time.sleep(10)
   except OSError as e:
     restart_and_reconnect()
-    
