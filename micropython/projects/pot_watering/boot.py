@@ -10,7 +10,7 @@ import BlynkLib
 
 ## WiFi Config
 ssid = 'Ankit'
-password = 'Compaq890#'
+password = 'Password'
 
 print("Connecting to Wifi Network: ",ssid)
 ## Wifi Connection
